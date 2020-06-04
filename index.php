@@ -1,44 +1,26 @@
 <?php
 
-//複数の値をてんか　foreach
+//switch
+// if文の方がいい　見やすい
 
-$members = [
-  'name' => '本田',
-  'height' => 170,
-  'hobby' => 'サッカー'
-];
+$data = 3;
 
-
-// バリューのみ表示
-foreach($members as $member){
-  echo $member;
+switch($data){
+  case 1:
+    echo '1です';
+  break;
+  case 2:
+    echo '2です';
+  break;
+  case 3: 
+    echo '3です';
+  break;
+  default:
+  echo '1-3ではありません';
 }
 
-echo '<br>';
-
-// キーとバリューそれぞれ表示
-foreach($members as $key => $value){
-echo $key .'は'.$value. 'です';
+if($data === 3){
+  echo '1';
 }
-
-$members_2 = [
-  '本田' => [
-  'height' => 170,
-  'hobby' => 'サッカー'
-  ],
-  '香川' => [
-  'height' => 165,
-  'hobby' => 'サッカー'
-  ]
-  ];
-
-  echo '<br>';
-
-  // 多段階の配列展開
-  foreach($members_2 as $member_1){
-    foreach($member_1 as $member => $value){
-    echo $member . 'は'. $value . 'です';
-    }
-  }
 
 ?>
